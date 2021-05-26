@@ -14,6 +14,8 @@
 		A05CF1BA265E09720050102D /* CharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05CF1B9265E09720050102D /* CharacterViewController.swift */; };
 		A05CF1BD265E141B0050102D /* MainScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A05CF1BC265E141B0050102D /* MainScene.sks */; };
 		A05CF1BF265E20590050102D /* MainSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05CF1BE265E20590050102D /* MainSceneView.swift */; };
+		A05CF1C1265E27320050102D /* MainScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05CF1C0265E27320050102D /* MainScene.swift */; };
+		A05CF1C3265E27E40050102D /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05CF1C2265E27E40050102D /* Character.swift */; };
 		A0641AD7265D7566008FC3B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0641AD6265D7566008FC3B4 /* AppDelegate.swift */; };
 		A0641AD9265D7566008FC3B4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0641AD8265D7566008FC3B4 /* SceneDelegate.swift */; };
 		A0641ADE265D7566008FC3B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0641ADC265D7566008FC3B4 /* Main.storyboard */; };
@@ -49,6 +51,8 @@
 		A05CF1B9265E09720050102D /* CharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewController.swift; sourceTree = "<group>"; };
 		A05CF1BC265E141B0050102D /* MainScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MainScene.sks; sourceTree = "<group>"; };
 		A05CF1BE265E20590050102D /* MainSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSceneView.swift; sourceTree = "<group>"; };
+		A05CF1C0265E27320050102D /* MainScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScene.swift; sourceTree = "<group>"; };
+		A05CF1C2265E27E40050102D /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		A0641AD3265D7565008FC3B4 /* Real RPG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Real RPG.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0641AD6265D7566008FC3B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0641AD8265D7566008FC3B4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +99,8 @@
 			children = (
 				A05CF1BC265E141B0050102D /* MainScene.sks */,
 				A05CF1BE265E20590050102D /* MainSceneView.swift */,
+				A05CF1C0265E27320050102D /* MainScene.swift */,
+				A05CF1C2265E27E40050102D /* Character.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -298,7 +304,9 @@
 			files = (
 				A0641AD7265D7566008FC3B4 /* AppDelegate.swift in Sources */,
 				A05CF1B8265E095A0050102D /* QuestViewController.swift in Sources */,
+				A05CF1C3265E27E40050102D /* Character.swift in Sources */,
 				A0641B09265D7834008FC3B4 /* LandingViewController.swift in Sources */,
+				A05CF1C1265E27320050102D /* MainScene.swift in Sources */,
 				A0641AD9265D7566008FC3B4 /* SceneDelegate.swift in Sources */,
 				A05CF1BA265E09720050102D /* CharacterViewController.swift in Sources */,
 				A05CF1B6265E09450050102D /* ProgressViewController.swift in Sources */,

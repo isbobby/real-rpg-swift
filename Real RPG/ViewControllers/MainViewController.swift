@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import SpriteKit
+import GameplayKit
 
 class MainViewController: UIViewController {
     
@@ -20,8 +22,24 @@ class MainViewController: UIViewController {
     @IBAction func progressButtonOnPress(_ sender: Any) {
         performSegue(withIdentifier: "MainToProgress", sender: self)
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+    }
+    
+    func loadMainScene() {
+        if let view = self.view as! SKView? {
+            // Load the SKScene from 'GameScene.sks'
+            if let scene = SKScene(fileNamed: "MainScene") {
+                scene.scaleMode = .resizeFill
+                // Present the scene
+                view.presentScene(scene)
+            }
+            
+            view.ignoresSiblingOrder = true
+            view.showsFPS = true
+            view.showsNodeCount = true
+        }
     }
 }
