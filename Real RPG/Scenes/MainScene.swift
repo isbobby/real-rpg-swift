@@ -24,13 +24,6 @@ class MainScene: SKScene {
     let playerMainCharacter = Character()
     
     override func didMove(to view: SKView) {
-        // position the background to be at the center of the screen
-        let backGround = SKSpriteNode(imageNamed: "winterbackground")
-        backGround.position = CGPoint(x: frame.midX, y: frame.midY)
-        backGround.alpha = 0.9
-        backGround.zPosition = -1
-        addChild(backGround)
-    
         initPlayerCharacter()
         updateCharacter()
         
@@ -50,28 +43,28 @@ class MainScene: SKScene {
         
         // define game pad and buttons
         jumpButton.size = CGSize(width: 50, height: 50)
-        jumpButton.position = CGPoint(x: 0, y :-180)
+        jumpButton.position = CGPoint(x: 0, y :-250)
         addChild(jumpButton)
         
         leftButton.size = CGSize(width: 50, height: 50)
-        leftButton.position = CGPoint(x: -100, y :-180)
+        leftButton.position = CGPoint(x: -80, y :-250)
         addChild(leftButton)
         
         rightButton.size = CGSize(width: 50, height: 50)
-        rightButton.position = CGPoint(x: 100, y :-180)
+        rightButton.position = CGPoint(x: 120, y :-250)
         addChild(rightButton)
         
-        entryButton.size = CGSize(width: 50, height: 50)
-        entryButton.position = CGPoint(x: 0, y :-210)
-        addChild(entryButton)
+//        entryButton.size = CGSize(width: 50, height: 50)
+//        entryButton.position = CGPoint(x: 0, y :-210)
+//        addChild(entryButton)
         
-        nextSceneButton.size = CGSize(width: 50, height: 70)
-        nextSceneButton.position = CGPoint(x: 120, y :50)
-        addChild(nextSceneButton)
+//        nextSceneButton.size = CGSize(width: 50, height: 70)
+//        nextSceneButton.position = CGPoint(x: 120, y :50)
+//        addChild(nextSceneButton)
         
-        previousSceneButton.size = CGSize(width: 50, height: 70)
-        previousSceneButton.position = CGPoint(x: -120, y :50)
-        addChild(previousSceneButton)
+//        previousSceneButton.size = CGSize(width: 50, height: 70)
+//        previousSceneButton.position = CGPoint(x: -120, y :50)
+//        addChild(previousSceneButton)
     }
     
     
