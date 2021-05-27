@@ -43,15 +43,15 @@ class MainScene: SKScene {
         
         // define game pad and buttons
         jumpButton.size = CGSize(width: 50, height: 50)
-        jumpButton.position = CGPoint(x: 0, y :-250)
+        jumpButton.position = CGPoint(x: 0, y :-290)
         addChild(jumpButton)
         
         leftButton.size = CGSize(width: 50, height: 50)
-        leftButton.position = CGPoint(x: -80, y :-250)
+        leftButton.position = CGPoint(x: -120, y :-290)
         addChild(leftButton)
         
         rightButton.size = CGSize(width: 50, height: 50)
-        rightButton.position = CGPoint(x: 120, y :-250)
+        rightButton.position = CGPoint(x: 120, y :-290)
         addChild(rightButton)
         
 //        entryButton.size = CGSize(width: 50, height: 50)
@@ -121,9 +121,9 @@ class MainScene: SKScene {
     
     // Player character class is defined in /CustomClasses/PlayerCharacter
     func initPlayerCharacter() {
-        playerMainCharacter.texture = SKTexture(imageNamed: "cyanman")
-        playerMainCharacter.size = CGSize(width: 80, height: 100)
-        playerMainCharacter.physicsBody = SKPhysicsBody(circleOfRadius: 50)
+        playerMainCharacter.texture = SKTexture(imageNamed: "devCharacter")
+        playerMainCharacter.size = CGSize(width: 160, height: 260)
+        playerMainCharacter.physicsBody = SKPhysicsBody(circleOfRadius: 80)
         playerMainCharacter.name = String("mainCharacter")
         playerMainCharacter.physicsBody?.allowsRotation = false
         playerMainCharacter.physicsBody?.friction = 0.1
@@ -135,6 +135,6 @@ class MainScene: SKScene {
     // A test function to update Character
     func updateCharacter() {
         // create a sample banana item
-        playerMainCharacter.updateRightHandGear(gearName: "banana")
+//        playerMainCharacter.updateRightHandGear(gearName: "banana")
     }
 }
