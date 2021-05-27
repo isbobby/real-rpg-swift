@@ -9,11 +9,29 @@ import UIKit
 
 class ProgressViewController: UIViewController {
     
-    @IBAction func backButton(_ sender: Any) {
+    
+    @IBAction func submitTaskOnPress(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    
+    
+    @IBAction func cancelOnPress(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func sliderOnChange(_ sender: Any) {
+        print("Slided")
+    }
+    
+    @IBAction func descriptionEditDidEnd(_ sender: Any) {
+        print("Slided")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 }
+
+
+

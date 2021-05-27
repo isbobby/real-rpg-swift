@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		87D3C1E1265F8DF8008A0DAC /* SqliteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D3C1E0265F8DF8008A0DAC /* SqliteService.swift */; };
 		A05CF1B2265DFCBE0050102D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05CF1B1265DFCBE0050102D /* MainViewController.swift */; };
 		A05CF1B4265E09250050102D /* DebugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05CF1B3265E09250050102D /* DebugViewController.swift */; };
 		A05CF1B6265E09450050102D /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05CF1B5265E09450050102D /* ProgressViewController.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		87D3C1E0265F8DF8008A0DAC /* SqliteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SqliteService.swift; sourceTree = "<group>"; };
 		A05CF1B1265DFCBE0050102D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A05CF1B3265E09250050102D /* DebugViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugViewController.swift; sourceTree = "<group>"; };
 		A05CF1B5265E09450050102D /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +96,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		87D3C1DF265F8DEC008A0DAC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				87D3C1E0265F8DF8008A0DAC /* SqliteService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		A05CF1BB265E13DB0050102D /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +138,7 @@
 		A0641AD5265D7565008FC3B4 /* Real RPG */ = {
 			isa = PBXGroup;
 			children = (
+				87D3C1DF265F8DEC008A0DAC /* Services */,
 				A05CF1BB265E13DB0050102D /* Scenes */,
 				A0641B06265D7814008FC3B4 /* ViewControllers */,
 				A0641AD6265D7566008FC3B4 /* AppDelegate.swift */,
@@ -303,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0641AD7265D7566008FC3B4 /* AppDelegate.swift in Sources */,
+				87D3C1E1265F8DF8008A0DAC /* SqliteService.swift in Sources */,
 				A05CF1B8265E095A0050102D /* QuestViewController.swift in Sources */,
 				A05CF1C3265E27E40050102D /* Character.swift in Sources */,
 				A0641B09265D7834008FC3B4 /* LandingViewController.swift in Sources */,

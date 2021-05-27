@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SQLite3
 
 class LandingViewController: UIViewController {
     @IBOutlet weak var HelloSirLabel: UILabel!
@@ -19,6 +20,9 @@ class LandingViewController: UIViewController {
     
     
     override func viewDidLoad() {
+        let sqliteApi = SqliteApi()
+        sqliteApi.createTables()
+        
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
