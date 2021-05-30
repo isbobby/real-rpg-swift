@@ -11,7 +11,9 @@ class ProgressViewController: UIViewController {
     
     
     @IBAction func submitTaskOnPress(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        
+         SqliteApi().insertTask(character_id: 1, experience: 1, description: "Sample Task", complete_time: Date())
+
     }
     
     
