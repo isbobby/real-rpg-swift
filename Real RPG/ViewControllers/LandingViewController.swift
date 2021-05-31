@@ -18,6 +18,9 @@ class LandingViewController: UIViewController {
         performSegue(withIdentifier: "ToMainInterfaceSegue", sender: self)
     }
     
+    @IBAction func DebugOnPress(_ sender: Any) {
+        performSegue(withIdentifier: "LandingToDebug", sender: self)
+    }
     
     override func viewDidLoad() {
         let sqliteApi = SqliteApi()

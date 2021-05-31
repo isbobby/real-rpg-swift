@@ -23,7 +23,7 @@ class SqliteApi {
         let fileURL = try! FileManager.default
             .url(for: .applicationSupportDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
             .appendingPathComponent("real_rpg_database.sqlite")
-
+        
         // open database
         var db: OpaquePointer?
         if (sqlite3_open(fileURL.path, &db) == SQLITE_OK) {
@@ -36,7 +36,7 @@ class SqliteApi {
     }
     
     func createTables() {
-
+        
         self.openDatabase()
         
         if sqlite3_exec(self.db, self.createCharacterTableString, nil, nil, nil) != SQLITE_OK {
@@ -59,7 +59,7 @@ class SqliteApi {
         self.openDatabase()
         
         let formatter = DateFormatter()
-
+        
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         
         let query_string = NSString(format: "%d %d %@ %@", character_id, experience, description, formatter.string(from: complete_time))
@@ -72,7 +72,7 @@ class SqliteApi {
         self.openDatabase()
         
         let formatter = DateFormatter()
-
+        
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         
         let query_string = "INSERT INTO characters (class_name, experience) VALUES ('" + class_name + "'," + String(experience) + ")"
@@ -99,28 +99,36 @@ class SqliteApi {
         }
     }
     
-    func getAllCharacters() {
+    func getAllCharacters() -> Array<PlayerCharacter> {
         openDatabase()
-        
+        var characterList: Array<PlayerCharacter> = []
         var queryStatement: OpaquePointer?
-        if sqlite3_prepare_v2(self.db, "SELECT * FROM characters", -1, &queryStatement, nil) ==
-              SQLITE_OK {
-            if sqlite3_step(queryStatement) == SQLITE_ROW {
-              let id = sqlite3_column_int(queryStatement, 0)
-              guard let queryResultCol1 = sqlite3_column_text(queryStatement, 1) else {
-                print("Query result is nil")
-                return
-              }
-              let name = String(cString: queryResultCol1)
-              print("\(id) | \(name)")
-          } else {
-              print("\nQuery returned no results.")
-          }
-          } else {
+        if sqlite3_prepare_v2(
+            db,
+            "SELECT * FROM characters",
+            -1,
+            &queryStatement,
+            nil
+        ) == SQLITE_OK {
+            while (sqlite3_step(queryStatement) == SQLITE_ROW) {
+                let id = sqlite3_column_int(queryStatement, 0)
+                guard let queryResultCol1 = sqlite3_column_text(queryStatement, 1) else {
+                    return []
+                }
+                let class_name = String(cString: queryResultCol1)
+                let experience = sqlite3_column_int(queryStatement, 2)
+                
+                let result: PlayerCharacter = PlayerCharacter()
+                result.id = Int(id)
+                result.class_name = class_name
+                result.experience = Int(experience)
+                characterList.append(result)
+            }
+        } else {
             let errorMessage = String(cString: sqlite3_errmsg(db))
             print("\nQuery is not prepared \(errorMessage)")
-          }
-          sqlite3_finalize(queryStatement)
-        
+        }
+        sqlite3_finalize(queryStatement)
+        return characterList
     }
 }

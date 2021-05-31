@@ -14,7 +14,7 @@ class CharacterViewController: UIViewController {
     }
 
     @IBAction func createOnPress(_ sender: Any) {
-        // SqliteApi().insertCharacter(class_name: "Test", experience: 0)
+//        SqliteApi().insertCharacter(class_name: "Da Vinci",  experience: 0)
         SqliteApi().getAllCharacters()
     }
     
