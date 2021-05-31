@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8727EE372664E48F0052ABC7 /* PlayerCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8727EE362664E48F0052ABC7 /* PlayerCharacter.swift */; };
+		8727EE402664F94F0052ABC7 /* CharacterCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8727EE3F2664F94F0052ABC7 /* CharacterCreationViewController.swift */; };
 		87D3C1E1265F8DF8008A0DAC /* SqliteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D3C1E0265F8DF8008A0DAC /* SqliteService.swift */; };
 		A05CF1B2265DFCBE0050102D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05CF1B1265DFCBE0050102D /* MainViewController.swift */; };
 		A05CF1B4265E09250050102D /* DebugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05CF1B3265E09250050102D /* DebugViewController.swift */; };
@@ -47,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		8727EE362664E48F0052ABC7 /* PlayerCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCharacter.swift; sourceTree = "<group>"; };
+		8727EE3F2664F94F0052ABC7 /* CharacterCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCreationViewController.swift; sourceTree = "<group>"; };
 		87D3C1E0265F8DF8008A0DAC /* SqliteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SqliteService.swift; sourceTree = "<group>"; };
 		A05CF1B1265DFCBE0050102D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A05CF1B3265E09250050102D /* DebugViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +106,15 @@
 				8727EE362664E48F0052ABC7 /* PlayerCharacter.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		8727EE3E2664F9370052ABC7 /* Character */ = {
+			isa = PBXGroup;
+			children = (
+				A05CF1B9265E09720050102D /* CharacterViewController.swift */,
+				8727EE3F2664F94F0052ABC7 /* CharacterCreationViewController.swift */,
+			);
+			path = Character;
 			sourceTree = "<group>";
 		};
 		87D3C1DF265F8DEC008A0DAC /* Services */ = {
@@ -183,12 +194,12 @@
 		A0641B06265D7814008FC3B4 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				8727EE3E2664F9370052ABC7 /* Character */,
 				A0641B08265D7834008FC3B4 /* LandingViewController.swift */,
 				A05CF1B7265E095A0050102D /* QuestViewController.swift */,
 				A05CF1B1265DFCBE0050102D /* MainViewController.swift */,
 				A05CF1B3265E09250050102D /* DebugViewController.swift */,
 				A05CF1B5265E09450050102D /* ProgressViewController.swift */,
-				A05CF1B9265E09720050102D /* CharacterViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -333,6 +344,7 @@
 				A0641AD9265D7566008FC3B4 /* SceneDelegate.swift in Sources */,
 				A05CF1BA265E09720050102D /* CharacterViewController.swift in Sources */,
 				A05CF1B6265E09450050102D /* ProgressViewController.swift in Sources */,
+				8727EE402664F94F0052ABC7 /* CharacterCreationViewController.swift in Sources */,
 				A05CF1B2265DFCBE0050102D /* MainViewController.swift in Sources */,
 				8727EE372664E48F0052ABC7 /* PlayerCharacter.swift in Sources */,
 				A05CF1B4265E09250050102D /* DebugViewController.swift in Sources */,

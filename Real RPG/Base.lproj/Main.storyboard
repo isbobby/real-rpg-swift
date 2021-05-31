@@ -26,8 +26,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s2Q-Zs-RRO">
-                                <rect key="frame" x="178" y="314" width="59" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="177" y="317" width="59" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Debug 2"/>
                                 <connections>
                                     <action selector="debugTwoOnPress:" destination="AeO-mn-iLR" eventType="touchUpInside" id="ZdB-2M-oAF"/>
@@ -188,9 +188,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bh-kO-d82">
-                                <rect key="frame" x="262" y="638" width="46" height="30"/>
+                                <rect key="frame" x="261" y="638" width="48" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Cancel"/>
                                 <connections>
                                     <action selector="backButton:" destination="IdE-Sc-4aa" eventType="touchUpInside" id="KeF-kQ-mf1"/>
                                     <action selector="backButton:" destination="fSJ-cy-pZ8" eventType="touchUpInside" id="iTo-AT-K4T"/>
@@ -201,11 +201,47 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="DIG-Yv-kfZ"/>
+                    <connections>
+                        <segue destination="2SA-tG-iWh" kind="presentation" identifier="CharacterToCharacterCreation" id="K6f-mM-KPM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SRA-t4-luT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="fSJ-cy-pZ8" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3970" y="88"/>
+        </scene>
+        <!--Character Creation View Controller-->
+        <scene sceneID="upe-Xc-TDQ">
+            <objects>
+                <viewController id="2SA-tG-iWh" customClass="CharacterCreationViewController" customModule="Real_RPG" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e1d-hp-M6C">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gMx-qI-XXs">
+                                <rect key="frame" x="264" y="621" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelOnPress:" destination="2SA-tG-iWh" eventType="touchUpInside" id="U7o-Ze-cEN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oed-eQ-81j">
+                                <rect key="frame" x="94" y="621" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Create"/>
+                                <connections>
+                                    <action selector="createOnPress:" destination="2SA-tG-iWh" eventType="touchUpInside" id="e2T-FA-dIb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Vqd-ir-w2q"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BAA-yR-iYd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5288" y="87"/>
         </scene>
         <!--Progress View Controller-->
         <scene sceneID="MwK-GZ-lP5">

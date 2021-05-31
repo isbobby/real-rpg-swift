@@ -7,9 +7,7 @@
 
 import UIKit
 
-class DebugViewController: UIViewController {
-    // SqliteApi().insertTask(character_id: 1, experience: 1, description: "Sample Task", complete_time: Date())
-    
+class DebugViewController: UIViewController {    
     
     @IBAction func debugOneOnPress(_ sender: Any) {
         let characterList: [PlayerCharacter] = SqliteApi().getAllCharacters()
@@ -22,9 +20,9 @@ class DebugViewController: UIViewController {
     }
     
     @IBAction func debugTwoOnPress(_ sender: Any) {
-        SqliteApi().deleteCharacterById(character_id: 3)
-        SqliteApi().deleteCharacterById(character_id: 4)
-        SqliteApi().deleteCharacterById(character_id: 5)
+        // SqliteApi().deleteCharacterById(character_id: 3)
+        // SqliteApi().deleteCharacterById(character_id: 4)
+        // SqliteApi().deleteCharacterById(character_id: 5)
     }
     
     override func viewDidLoad() {
