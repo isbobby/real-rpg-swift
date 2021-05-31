@@ -54,4 +54,13 @@ class SqliteApi {
             print("Create task table success")
         }
     }
+    
+    func insertTask(character_id:Int, experience: Int, description: String, complete_time: Date) {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        
+        let insertTaskString = NSString(format: "%d %d %@ %@", character_id, experience, description, formatter.string(from: complete_time))
+        
+        print(insertTaskString)
+    }
 }
