@@ -12,9 +12,20 @@ class PlayerCharacter {
     var class_name: String?
     var experience: Int?
     
-//    init(id: Int, class_name: String, experience: Int){
-//        self.id = id
-//        self.class_name = class_name
-//        self.experience = experience
-//    }
+    let LEVEL_1 = 2
+    let LEVEL_2 = 5
+    let LEVEL_3 = 12
+    let LEVEL_4 = 20
+    let LEVEL_5 = 32
+    let LEVEL_6 = 45
+    
+    func calculateLevel() -> Int {
+        // todo use self.experience to calculate level
+        return 0
+    }
+    
+    func progressBarPercentage() -> Float {
+        // todo use self.experience to calculate percentage bar
+        return 0.0
+    }
 }
