@@ -13,6 +13,11 @@ class CharacterViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
 
+    @IBAction func createOnPress(_ sender: Any) {
+        // SqliteApi().insertCharacter(class_name: "Test", experience: 0)
+        SqliteApi().getAllCharacters()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
